@@ -1,0 +1,98 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "UserAuth",
+    "dateExported": "2023-07-12T15:15:52.904Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "8f0797f6-4d3f-47d3-adcd-5613f89840c1",
+            "colId": "09221b8f-73be-407c-9f3a-1ab60e600c8b",
+            "containerId": "",
+            "name": "Ping",
+            "url": "localhost:3001",
+            "method": "GET",
+            "sortNum": 5000,
+            "created": "2023-07-12T15:11:46.356Z",
+            "modified": "2023-07-12T15:11:55.986Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "a43a28bc-54a8-4ac8-b56b-497fccca06b4",
+            "colId": "09221b8f-73be-407c-9f3a-1ab60e600c8b",
+            "containerId": "",
+            "name": "Register",
+            "url": "localhost:3001/auth/register",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-07-12T15:10:39.555Z",
+            "modified": "2023-07-12T15:11:12.566Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"username\": \"John Doe\",\n  \"email\": \"johndoe@gmail.com\",\n  \"password\": \"fishcake\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8ec1971b-4647-47dd-8d86-ce6ae2a776ba",
+            "colId": "09221b8f-73be-407c-9f3a-1ab60e600c8b",
+            "containerId": "",
+            "name": "Login",
+            "url": "localhost:3001/auth/login",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-07-12T15:11:41.196Z",
+            "modified": "2023-07-12T15:12:32.698Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"email\": \"johndoe@gmail.com\",\n  \"password\": \"fishcake\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "4a9574ab-e2f7-40a2-b2fe-0fff5751c3b2",
+            "colId": "09221b8f-73be-407c-9f3a-1ab60e600c8b",
+            "containerId": "",
+            "name": "Me (Protected)",
+            "url": "localhost:3001/auth/me",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-07-12T15:13:04.614Z",
+            "modified": "2023-07-12T15:13:41.898Z",
+            "headers": [],
+            "params": [],
+            "auth": {
+                "type": "bearer",
+                "bearer": "{access_token}"
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6c39cfe-b8bf-4091-92a9-7493777b1180",
+            "colId": "09221b8f-73be-407c-9f3a-1ab60e600c8b",
+            "containerId": "",
+            "name": "Refresh Access Token",
+            "url": "localhost:3001/auth/refreshAccessToken",
+            "method": "GET",
+            "sortNum": 50000,
+            "created": "2023-07-12T15:13:52.987Z",
+            "modified": "2023-07-12T15:14:26.233Z",
+            "headers": [
+                {
+                    "name": "Cookie",
+                    "value": "jwt={refresh_token}; HttpOnly; Secure; Max-Age=172800"
+                }
+            ],
+            "params": [],
+            "tests": []
+        }
+    ]
+}
